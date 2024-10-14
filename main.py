@@ -1,6 +1,9 @@
 import discord
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.messages = True  # Enable the messages intent
+
+client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
